@@ -1,0 +1,18 @@
+find / -user flag00  2>/dev/null
+/usr/sbin/john
+/rofs/usr/sbin/john
+
+cat /usr/sbin/john
+cdiiddwpgswtgt
+
+# Rotate text by replacing current `char` to `char + 11`
+cat /usr/sbin/john | tr a-kl-z l-za-k
+nottoohardhere
+
+# Log into `flag00` with obtained password
+su flag00
+Password: nottoohardhere
+
+# Get token
+getflag
+x24ti5gi3x0ol2eh4esiuxias
