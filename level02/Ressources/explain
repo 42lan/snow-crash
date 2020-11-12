@@ -1,0 +1,43 @@
+aslan$ scp -P 4242 level02@192.168.1.64:~/level02.pcap  .
+aslan$ chmod +r level02.pcap
+
+# Open level02.pcap with Wireshark
+# Follow TCP Stream and should see ft_wandr...NDRel.L0L
+# Swith to show data as Hex Dump
+
+Packet	  Hexadecimal										 ASCII
+000000D6  00 0d 0a 50 61 73 73 77  6f 72 64 3a 20            ...Passw ord: 
+000000B9  66                                                 f
+000000BA  74                                                 t
+000000BB  5f                                                 _
+000000BC  77                                                 w
+000000BD  61                                                 a
+000000BE  6e                                                 n
+000000BF  64                                                 d
+000000C0  72                                                 r
+000000C1  7f                                                 .
+000000C2  7f                                                 .
+000000C3  7f                                                 .
+000000C4  4e                                                 N
+000000C5  44                                                 D
+000000C6  52                                                 R
+000000C7  65                                                 e
+000000C8  6c                                                 l
+000000C9  7f                                                 .
+000000CA  4c                                                 L
+000000CB  30                                                 0
+000000CC  4c                                                 L
+000000CD  0d                                                 .
+
+# "The stream content is displayed in the same sequence as it appeared on the network. Non-printable characters are replaced by dots."
+# https://www.wireshark.org/docs/wsug_html_chunked/ChAdvFollowStreamSection.html
+# 
+# ASCII table shows that 7f is a Delete character: 7F DEL
+# So removing all character followed by dot gives:
+# 	ft_wandr...NDRel.L0L  --->   ft_waNDReL0L
+level02@SnowCrash:~$ su flag02
+Password: # ft_waNDReL0L
+flag02@SnowCrash:~$ getflag
+Check flag.Here is your token : kooda2puivaav1idi4f57q8iq
+
+kooda2puivaav1idi4f57q8iq
