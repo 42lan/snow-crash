@@ -1,18 +1,18 @@
-find / -user flag00  2>/dev/null
+┌──$ [~/42/2020/snow-crash]
+└─>  ssh 192.168.1.64 -p 4242 -l level00
+level00@192.168.1.64's password: level00
+level00@SnowCrash:~$ find / -user flag00  2>/dev/null
 /usr/sbin/john
 /rofs/usr/sbin/john
-
-cat /usr/sbin/john
+level00@SnowCrash:~$ cat /usr/sbin/john
 cdiiddwpgswtgt
-
 # Rotate text by replacing current `char` to `char + 11`
-cat /usr/sbin/john | tr a-kl-z l-za-k
+level00@SnowCrash:~$ cat /usr/sbin/john | tr a-kl-z l-za-k
 nottoohardhere
-
 # Log into `flag00` with obtained password
-su flag00
+level00@SnowCrash:~$ su flag00
 Password: nottoohardhere
-
+Don't forget to launch getflag !
 # Get token
-getflag
-x24ti5gi3x0ol2eh4esiuxias
+flag00@SnowCrash:~$ getflag
+Check flag.Here is your token : x24ti5gi3x0ol2eh4esiuxias

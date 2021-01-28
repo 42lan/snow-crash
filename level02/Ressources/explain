@@ -1,5 +1,21 @@
-aslan$ scp -P 4242 level02@192.168.1.64:~/level02.pcap  .
-aslan$ chmod +r level02.pcap
+┌──$ [~/42/2020/snow-crash]
+└─>  ssh 192.168.1.64 -p 4242 -l level02
+level02@192.168.1.64's password: f2av5il02puano7naaf6adaaf
+level02@SnowCrash:~$ ls -l
+total 12
+----r--r-- 1 flag02  level02 8302 Aug 30  2015 level02.pcap
+level02@SnowCrash:~$ exit
+logout
+Connection to 192.168.1.64 closed.
+┌──$ [~/42/2020/snow-crash]
+└─>  scp -P 4242 level02@192.168.1.64:~/level02.pcap  .
+level02@192.168.1.64's password: f2av5il02puano7naaf6adaaf
+level02.pcap                 100% 8302    10.4MB/s   00:00
+┌──$ [~/42/2020/snow-crash]
+└─>  ls -la level02.pcap
+----r--r--  1 aslan  staff  8302 Jan 28 08:11 level02.pcap
+┌──$ [~/42/2020/snow-crash]
+└─>  chmod +r level02.pcap
 
 # Open level02.pcap with Wireshark
 # Follow TCP Stream and should see ft_wandr...NDRel.L0L
@@ -36,8 +52,7 @@ Packet	  Hexadecimal										 ASCII
 # So removing all character followed by dot gives:
 # 	ft_wandr...NDRel.L0L  --->   ft_waNDReL0L
 level02@SnowCrash:~$ su flag02
-Password: # ft_waNDReL0L
+Password: ft_waNDReL0L
+Don't forget to launch getflag !
 flag02@SnowCrash:~$ getflag
 Check flag.Here is your token : kooda2puivaav1idi4f57q8iq
-
-kooda2puivaav1idi4f57q8iq
