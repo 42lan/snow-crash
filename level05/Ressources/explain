@@ -5,7 +5,7 @@ You have new mail.
 level05@SnowCrash:~$ cat /var/mail/level05
 */2 * * * * su -c "sh /usr/sbin/openarenaserver" - flag05
 # At every 2nd minute the script /usr/sbin/openarenaserver will be executed
-level05@SnowCrash:~$ cat << EOF > /tmp/script
+level05@SnowCrash:~$ cat << EOF > /opt/openarenaserver/script
 > #!/bin/bash
 > /bin/getflag > /tmp/flag
 > EOF
