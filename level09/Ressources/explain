@@ -1,0 +1,21 @@
+┌──$ [~/42/2021/snow-crash]
+└─>  ssh 192.168.1.64 -p 4242 -l level09
+level09@192.168.1.64's password: 25749xKZ8L7DkSCwJkT9dyv6f
+level09@SnowCrash:~$ python - << EOF
+> import sys
+> i = -1
+> content = open("/home/user/level09/token").readlines()[0]
+> for c in content:
+>         i += 1
+>         try:
+>                 sys.stdout.write(chr(ord(c) - i))
+>         except:
+>                 pass
+> print '\n',
+> EOF
+f3iji1ju5yuevaus41q1afiuq
+level09@SnowCrash:~$ su flag09
+Password: f3iji1ju5yuevaus41q1afiuq
+Don't forget to launch getflag !
+flag09@SnowCrash:~$ getflag
+Check flag.Here is your token : s5cAJpM8ev6XHw998pRWG728z
