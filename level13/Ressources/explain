@@ -1,4 +1,3 @@
-Connection to 192.168.1.64 closed.
 ┌──$ [~/42/2021/snow-crash]
 └─>  ssh 192.168.1.64 -p 4242 -l level13
 level13@192.168.1.64's password: g1qKMiRpXf53AWhDaU7FEkczr

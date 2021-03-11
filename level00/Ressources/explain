@@ -1,3 +1,18 @@
+TLTR;
+┌──$ [~/42/2020/snow-crash]
+└─>  ssh 192.168.1.64 -p 4242 -l level00
+level00@192.168.1.64's password: level00
+level00@SnowCrash:~$ alias rot11="tr A-Za-z L-ZA-Kl-za-k"
+level00@SnowCrash:~$ cat /usr/sbin/john | rot11
+nottoohardhere
+level00@SnowCrash:~$ su flag00
+Password: nottoohardhere
+Don't forget to launch getflag !
+flag00@SnowCrash:~$ getflag
+Check flag.Here is your token : x24ti5gi3x0ol2eh4esiuxias
+
+
+
 ┌──$ [~/42/2020/snow-crash]
 └─>  ssh 192.168.1.64 -p 4242 -l level00
 level00@192.168.1.64's password: level00
@@ -6,13 +21,14 @@ level00@SnowCrash:~$ find / -user flag00  2>/dev/null
 /rofs/usr/sbin/john
 level00@SnowCrash:~$ cat /usr/sbin/john
 cdiiddwpgswtgt
-# Rotate text by replacing current `char` to `char + 11`
-level00@SnowCrash:~$ cat /usr/sbin/john | tr a-kl-z l-za-k
+# Rotate text by replacing current `char` to `char + 11` (ROT11)
+# ABCDEFGHIJKLMNOPQRSTUVWXYZ
+# LMNOPQRSTUVWXYZABCDEFGHIJK
+level00@SnowCrash:~$ alias rot11="tr A-Za-z L-ZA-Kl-za-k"
+level00@SnowCrash:~$ cat /usr/sbin/john | rot11
 nottoohardhere
-# Log into `flag00` with obtained password
 level00@SnowCrash:~$ su flag00
 Password: nottoohardhere
 Don't forget to launch getflag !
-# Get token
 flag00@SnowCrash:~$ getflag
 Check flag.Here is your token : x24ti5gi3x0ol2eh4esiuxias
