@@ -6,10 +6,10 @@ level01@SnowCrash:~$ cat /etc/passwd
 flag01:42hDRfypTqqnw:3001:3001::/home/flag/flag01:/bin/bash
 [...]
 
-kali@kali:~$ echo "42hDRfypTqqnw" > /tmp/flag01
-kali@kali:~$ john /tmp/flag01 --show
+kali@kali:~$ john --show <(echo 42hDRfypTqqnw)
 ?:abcdefg
 
+1 password hash cracked, 0 left
 level01@SnowCrash:~$ su flag01
 Password: abcdefg
 Don't forget to launch getflag !
