@@ -13,4 +13,4 @@ This project is therefore a short introduction to the vast universe that is cybe
 Snow Crash will make me discover security in various sub-domains, with a developer-oriented approach. 
 I will become familiar with several languages (ASM/perl/php…), develop a certain logic to understand unknown programs, and become aware of problems linked to simple programming errors.
 
-# Check out wiki page: https://github.com/4slan/snow-crash/wiki
+# Check out [my wiki page](https://github.com/4slan/snow-crash/wiki) with formatted explains.
