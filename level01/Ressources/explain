@@ -3,19 +3,21 @@
 └─>  ssh 192.168.1.64 -p 4242 -l level01
 level01@192.168.1.64's password: x24ti5gi3x0ol2eh4esiuxias
 # There is no file or binary to exploit in home directory, nor file owned by flag01.
+level01@SnowCrash:~$ ls -l
+total 0
 # By looking /etc/passwd reveals encrypted password.
 level01@SnowCrash:~$ cat /etc/passwd
 [...]
 flag01:42hDRfypTqqnw:3001:3001::/home/flag/flag01:/bin/bash
 [...]
-# As /etc/passwd is readeable it can be copied.
+# As /etc/passwd is readable it can be copied.
 level01@SnowCrash:~$ ls -l /etc/passwd
 -rw-r--r-- 1 root root 2477 Mar  5  2016 /etc/passwd
 ┌──$ [~/42/2021/snow-crash]
 └─>  scp -P 4242 level01@192.168.1.64:/etc/passwd .
 level01@192.168.1.64's password: x24ti5gi3x0ol2eh4esiuxias
 passwd                       100% 2477     4.9MB/s   00:00
-# Copy passwd file into Kali Linux to futher processing.
+# Copy passwd file into Kali Linux to further processing.
 ┌──$ [~/42/2021/snow-crash]
 └─>  scp -P 2222 passwd kali@localhost:/tmp
 kali@localhost's password: kali

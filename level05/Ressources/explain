@@ -4,10 +4,10 @@
 level05@192.168.1.64's password: ne2searoevaevoem4ov4ar8ap
 You have new mail.
 # Once logged into level05 a message says that there is a new mail.
-# As mail program is not istalled, it's likely to be in the spool file /var/mail/$USER
+# As mail program is not installed, it's likely to be in the spool file /var/mail/$USER
 level05@SnowCrash:~$ cat /var/mail/level05
 */2 * * * * su -c "sh /usr/sbin/openarenaserver" - flag05
-# Seems that there is a cron job which executes the above commande at every 2nd minute.
+# Seems that there is a cron job which executes the above command at every 2nd minute.
 # Looking inside scripts shows a loop which iterate through all the files in /opt/openarenaserver/
 # and evaluate them.
 # ulimit -t means that the following process should be terminated if it uses more CPU time than what is specified in -t.

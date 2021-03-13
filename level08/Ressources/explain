@@ -24,9 +24,9 @@ exit(1 <unfinished ...>
 +++ exited (status 1) +++
 # strstr function locate a substring needle in the string haystack.
 # It can be deduced that if passed file has token string in name, it exits.
-# Make a symbolink link without token in a filename.
+# Make a symbolic link without token in a filename.
 level08@SnowCrash:~$ ln -s $(realpath token) /tmp/symlink
-# Exucute binary with symlink and get password to log into flag08.
+# Execute binary with symlink and get password to log into flag08.
 level08@SnowCrash:~$ ./level08 /tmp/symlink
 quif5eloekouj29ke0vouxean
 # Login as flag08 and get the flag.

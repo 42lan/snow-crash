@@ -31,7 +31,7 @@ puts("You should not reverse this"You should not reverse this
 )                                                                           = 28
 +++ exited (status 1) +++
 # "You should not reverse this" gives idea that output can be reversed.
-# Write a Python script which will substact index position from each character.
+# Write a Python script which will subtract index position from each character.
 level09@SnowCrash:~$ vi /tmp/reverse.py
 #!/usr/bin/python
 import sys

