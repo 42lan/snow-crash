@@ -12,7 +12,7 @@ Check flag.Here is your token : kooda2puivaav1idi4f57q8iq
 ***
 Login as `level02`.
 ```shell
-┌──$ [~/42/2020/snow-crash]
+┌──$ [~/42/2021/snow-crash]
 └─>  ssh 192.168.1.64 -p 4242 -l level02
 level02@192.168.1.64's password: f2av5il02puano7naaf6adaaf
 ```
@@ -25,17 +25,17 @@ total 12
 ```
 Copy `level02.pcap` file from VM on local to further processing.
 ```shell
-┌──$ [~/42/2020/snow-crash]
+┌──$ [~/42/2021/snow-crash]
 └─>  scp -P 4242 level02@192.168.1.64:~/level02.pcap  .
 level02@192.168.1.64's password: f2av5il02puano7naaf6adaaf
 level02.pcap                 100% 8302    10.4MB/s   00:00
 ```
 Copied file `level02.pcap` is not readable. So change file modes by setting on read bits.
 ```shell
-┌──$ [~/42/2020/snow-crash]
+┌──$ [~/42/2021/snow-crash]
 └─>  ls -l level02.pcap
 ----r--r--  1 aslan  staff  8302 Jan 28 08:11 level02.pcap 
-┌──$ [~/42/2020/snow-crash]
+┌──$ [~/42/2021/snow-crash]
 └─>  chmod +r level02.pcap
 ```
 Open `level02.pcap` with Wireshark and follow TCP Stream from packet `#43`.

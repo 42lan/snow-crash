@@ -1,6 +1,6 @@
 ### TLTR;
 ```shell
-┌──$ [~/42/2020/snow-crash]
+┌──$ [~/42/2021/snow-crash]
 └─>  ssh 192.168.1.64 -p 4242 -l level00
 level00@192.168.1.64's password: level00
 level00@SnowCrash:~$ alias rot11="tr A-Za-z L-ZA-Kl-za-k"
@@ -17,7 +17,7 @@ Check flag.Here is your token : x24ti5gi3x0ol2eh4esiuxias
 
 Login as `level00`.
 ```shell
-┌──$ [~/42/2020/snow-crash]
+┌──$ [~/42/2021/snow-crash]
 └─>  ssh 192.168.1.64 -p 4242 -l level00
 level00@192.168.1.64's password: level00
 ```

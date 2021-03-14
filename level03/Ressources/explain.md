@@ -1,6 +1,6 @@
 Login as `level03`.
 ```shell
-┌──$ [~/42/2020/snow-crash]
+┌──$ [~/42/2021/snow-crash]
 └─>  ssh 192.168.1.64 -p 4242 -l level03
 level03@192.168.1.64's password: kooda2puivaav1idi4f57q8iq
 ```
