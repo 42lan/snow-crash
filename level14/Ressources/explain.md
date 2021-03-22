@@ -49,3 +49,63 @@ Congratulation. Type getflag to get the key and send it to me the owner of this 
 flag14@SnowCrash:~$ getflag
 Check flag.Here is your token : 7QiHafiNa3HVozsaXkawuYrTstxbpABHD8CPnHJ
 ```
+
+
+
+
+
+level14@SnowCrash:~$ gdb /bin/getflag
+(gdb) break main
+Breakpoint 1 at 0x804894a
+(gdb) run
+Starting program: /bin/getflag
+
+Breakpoint 1, 0x0804894a in main ()
+(gdb) target record
+(gdb) b *0x0804898e
+Breakpoint 2 at 0x804898e
+(gdb) continue
+Continuing.
+
+Breakpoint 2, 0x0804898e in main ()
+(gdb) set $eax=42
+(gdb) until
+0x080489a8 in main () # Jumped on line
+(gdb) until
+0x080489a8 in main ()
+(gdb) b *0x080489b4
+Breakpoint 5 at 0x80489b4
+(gdb) continue
+Continuing.
+
+Breakpoint 5, 0x080489b4 in main ()
+(gdb) until
+0x080489b6 in main ()
+(gdb) until
+0x080489ea in main () # Jumped on line
+(gdb) b *0x080489fe
+Note: breakpoints 6 and 7 also set at pc 0x80489fe.
+Breakpoint 8 at 0x80489fe
+(gdb) continue
+Continuing.
+
+Breakpoint 6, 0x080489fe in main ()
+(gdb) until
+0x08048a00 in main ()
+(gdb) until
+0x08048a34 in main () # Jumped on line
+(gdb) b *0x08048a4c
+Breakpoint 9 at 0x8048a4c
+(gdb) continue
+Continuing.
+
+Breakpoint 9, 0x08048a4c in main ()
+......
+
+(gdb) b *0x08048ea5
+Breakpoint 10 at 0x8048ea5
+(gdb) continue
+Continuing.
+
+Breakpoint 10, 0x08048ea5 in main ()
+
