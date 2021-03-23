@@ -50,6 +50,10 @@ level00@SnowCrash:~$ alias rot11="tr A-Za-z L-ZA-Kl-za-k"
 level00@SnowCrash:~$ cat /usr/sbin/john | rot11
 nottoohardhere
 ```
+> `A-Za-z L-ZA-Kl-za-k == ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz LMNOPQRSTUVWXYZABCDEFGHIJKlmnopqrstuvwxyzabcdefghijk`
+
+_To find out proper shift, a brute-force attack can be done using [Dcode.fr](https://www.dcode.fr/caesar-cipher)_
+
 Login as `flag00` and get the flag.
 ```shell
 level00@SnowCrash:~$ su flag00
