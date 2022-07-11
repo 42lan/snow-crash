@@ -53,7 +53,7 @@ Check flag.Here is your token : 7QiHafiNa3HVozsaXkawuYrTstxbpABHD8CPnHJ
 
 
 
-
+```gdb
 level14@SnowCrash:~$ gdb /bin/getflag
 (gdb) break main
 Breakpoint 1 at 0x804894a
@@ -109,3 +109,4 @@ Continuing.
 
 Breakpoint 10, 0x08048ea5 in main ()
 
+```
